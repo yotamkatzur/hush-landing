@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+
+# Reference files (not part of the website)
+hf_*.png
+hf_*.jpeg
+hush-brand-blueprint.md

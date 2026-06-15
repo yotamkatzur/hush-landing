@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HUSH — Calm, by design.</title>
+  <meta name="description" content="The first pacifier brand built for design-conscious parents. Orthodontic silicone, matte beech wood. Available exclusively online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cart Overlay & Drawer -->
+  <div id="cart-overlay" class="cart-overlay" aria-hidden="true"></div>
+  <aside id="cart-drawer" class="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="cart-header">
+      <h2 class="cart-title">Your bag</h2>
+      <button class="cart-close" id="cart-close" aria-label="Close bag">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M15 5L5 15M5 5l10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart-body" id="cart-body">
+      <p class="cart-empty">Your bag is empty.</p>
+    </div>
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-total-row">
+        <span>Total</span>
+        <span id="cart-total">£0.00</span>
+      </div>
+      <a href="#" class="btn btn--sage btn--full">Checkout →</a>
+      <p class="cart-note">Free delivery on all orders</p>
+    </div>
+  </aside>
+
+  <!-- Navigation -->
+  <nav id="nav" class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <ul class="nav-links nav-links--left">
+        <li><a href="#shop" class="nav-link">Shop</a></li>
+        <li><a href="#trust" class="nav-link">About</a></li>
+        <li><a href="#bundle" class="nav-link">Bundle</a></li>
+      </ul>
+      <a href="#hero" class="nav-logo" aria-label="HUSH home">HUSH</a>
+      <div class="nav-right">
+        <button class="cart-trigger" id="cart-trigger" aria-label="Open shopping bag">
+          <svg class="cart-icon" width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+            <path d="M2 2h2.5L7 15h9l2.5-9H5.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="8.5" cy="18.5" r="1.5" fill="currentColor"/>
+            <circle cx="15.5" cy="18.5" r="1.5" fill="currentColor"/>
+          </svg>
+          <span class="cart-badge" id="cart-badge" aria-live="polite" aria-label="Items in bag">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero" aria-label="Hero">
+    <div class="hero-shelf" aria-hidden="true">
+      <div class="hero-shelf-card hero-shelf-card--sm">
+        <img src="images/color-dusk.png" alt="">
+      </div>
+      <div class="hero-shelf-card hero-shelf-card--lg">
+        <img src="images/color-sage.png" alt="">
+      </div>
+      <div class="hero-shelf-card hero-shelf-card--sm">
+        <img src="images/color-stone.png" alt="">
+      </div>
+    </div>
+    <div class="hero-text">
+      <p class="hero-kicker">0–36 months · Five colours · Online only</p>
+      <h1 class="hero-headline">Calm,<br>by design.</h1>
+      <p class="hero-sub">The first pacifier brand that belongs in a design-forward nursery — not a hospital cabinet.</p>
+      <a href="#shop" class="btn btn--dark hero-cta">Shop the range</a>
+    </div>
+  </section>
+
+  <!-- Brand Statement -->
+  <section class="statement" id="statement">
+    <div class="container">
+      <div class="statement-grid">
+        <div class="statement-copy">
+          <p class="section-kicker">CLEAN. MINIMAL. ESSENTIALS.</p>
+          <h2 class="statement-headline">Every parent deserves a pacifier they're proud to use.</h2>
+          <p class="statement-body">HUSH is the pacifier that belongs in a thoughtfully curated nursery. The same orthodontic silicone as the clinical brands, wrapped in matte beech wood. Beautiful and completely safe — no compromise.</p>
+          <div class="color-story">
+            <div class="color-story-item">
+              <div class="color-dot" style="background:#F5F0EA;border:1px solid rgba(44,41,37,0.15)"></div>
+              <span>Cloud</span>
+            </div>
+            <div class="color-story-item">
+              <div class="color-dot" style="background:#8FA889"></div>
+              <span>Sage</span>
+            </div>
+            <div class="color-story-item">
+              <div class="color-dot" style="background:#C4907A"></div>
+              <span>Dusk</span>
+            </div>
+            <div class="color-story-item">
+              <div class="color-dot" style="background:#9B9287"></div>
+              <span>Stone</span>
+            </div>
+            <div class="color-story-item">
+              <div class="color-dot" style="background:#1E2D3B"></div>
+              <span>Midnight</span>
+            </div>
+          </div>
+        </div>
+        <div class="statement-image">
+          <img src="images/hero-duo.png" alt="Two HUSH pacifiers on warm linen with eucalyptus">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="products" id="shop">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-kicker">THE RANGE</p>
+        <h2 class="section-title">Three sizes. Five colours. One philosophy.</h2>
+      </div>
+
+      <div class="product-grid">
+
+        <!-- HUSH 0 -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img src="images/color-sage.png" alt="HUSH 0 Pacifier in Sage" class="product-img" id="img-hush0">
+          </div>
+          <div class="product-swatches" role="group" aria-label="Choose colour for HUSH 0">
+            <button class="swatch swatch--active" style="background:#8FA889" data-img="images/color-sage.png" data-target="img-hush0" data-label-target="label-hush0" data-color-name="Sage" aria-label="Sage" aria-pressed="true"></button>
+            <button class="swatch" style="background:#C4907A" data-img="images/color-dusk.png" data-target="img-hush0" data-label-target="label-hush0" data-color-name="Dusk" aria-label="Dusk" aria-pressed="false"></button>
+            <button class="swatch" style="background:#9B9287" data-img="images/color-stone.png" data-target="img-hush0" data-label-target="label-hush0" data-color-name="Stone" aria-label="Stone" aria-pressed="false"></button>
+            <button class="swatch" style="background:#1E2D3B" data-img="images/color-midnight.png" data-target="img-hush0" data-label-target="label-hush0" data-color-name="Midnight" aria-label="Midnight" aria-pressed="false"></button>
+            <button class="swatch swatch--light" style="background:#F5F0EA" data-img="images/color-cloud.png" data-target="img-hush0" data-label-target="label-hush0" data-color-name="Cloud" aria-label="Cloud" aria-pressed="false"></button>
+          </div>
+          <span class="product-color-label" id="label-hush0">Sage</span>
+          <h3 class="product-name">HUSH 0</h3>
+          <p class="product-age">0–6 months · Newborn gentle</p>
+          <p class="product-desc">Orthodontic silicone nipple. Soft rounded beech wood shield. Designed for the gentlest start.</p>
+          <div class="pack-selector">
+            <button class="pack-btn pack-btn--active" data-price="18" data-pack-name="Single">Single — £18</button>
+            <button class="pack-btn" data-price="32" data-pack-name="Duo Pack">Duo — £32</button>
+          </div>
+          <button class="btn btn--dark btn--full add-to-cart" data-name="HUSH 0" data-price="18">Add to bag</button>
+        </article>
+
+        <!-- HUSH 1 -->
+        <article class="product-card product-card--featured">
+          <span class="product-badge">Best Seller</span>
+          <div class="product-image-wrap">
+            <img src="images/color-dusk.png" alt="HUSH 1 Pacifier in Dusk" class="product-img" id="img-hush1">
+          </div>
+          <div class="product-swatches" role="group" aria-label="Choose colour for HUSH 1">
+            <button class="swatch" style="background:#8FA889" data-img="images/color-sage.png" data-target="img-hush1" data-label-target="label-hush1" data-color-name="Sage" aria-label="Sage" aria-pressed="false"></button>
+            <button class="swatch swatch--active" style="background:#C4907A" data-img="images/color-dusk.png" data-target="img-hush1" data-label-target="label-hush1" data-color-name="Dusk" aria-label="Dusk" aria-pressed="true"></button>
+            <button class="swatch" style="background:#9B9287" data-img="images/color-stone.png" data-target="img-hush1" data-label-target="label-hush1" data-color-name="Stone" aria-label="Stone" aria-pressed="false"></button>
+            <button class="swatch" style="background:#1E2D3B" data-img="images/color-midnight.png" data-target="img-hush1" data-label-target="label-hush1" data-color-name="Midnight" aria-label="Midnight" aria-pressed="false"></button>
+            <button class="swatch swatch--light" style="background:#F5F0EA" data-img="images/color-cloud.png" data-target="img-hush1" data-label-target="label-hush1" data-color-name="Cloud" aria-label="Cloud" aria-pressed="false"></button>
+          </div>
+          <span class="product-color-label" id="label-hush1">Dusk</span>
+          <h3 class="product-name">HUSH 1</h3>
+          <p class="product-age">6–18 months · Core design</p>
+          <p class="product-desc">Beech wood disc with engraved circular pattern. The design that started everything.</p>
+          <div class="pack-selector">
+            <button class="pack-btn pack-btn--active" data-price="18" data-pack-name="Single">Single — £18</button>
+            <button class="pack-btn" data-price="32" data-pack-name="Duo Pack">Duo — £32</button>
+          </div>
+          <button class="btn btn--dark btn--full add-to-cart" data-name="HUSH 1" data-price="18">Add to bag</button>
+        </article>
+
+        <!-- HUSH 2 -->
+        <article class="product-card">
+          <div class="product-image-wrap">
+            <img src="images/color-stone.png" alt="HUSH 2 Pacifier in Stone" class="product-img" id="img-hush2">
+          </div>
+          <div class="product-swatches" role="group" aria-label="Choose colour for HUSH 2">
+            <button class="swatch" style="background:#8FA889" data-img="images/color-sage.png" data-target="img-hush2" data-label-target="label-hush2" data-color-name="Sage" aria-label="Sage" aria-pressed="false"></button>
+            <button class="swatch" style="background:#C4907A" data-img="images/color-dusk.png" data-target="img-hush2" data-label-target="label-hush2" data-color-name="Dusk" aria-label="Dusk" aria-pressed="false"></button>
+            <button class="swatch swatch--active" style="background:#9B9287" data-img="images/color-stone.png" data-target="img-hush2" data-label-target="label-hush2" data-color-name="Stone" aria-label="Stone" aria-pressed="true"></button>
+            <button class="swatch" style="background:#1E2D3B" data-img="images/color-midnight.png" data-target="img-hush2" data-label-target="label-hush2" data-color-name="Midnight" aria-label="Midnight" aria-pressed="false"></button>
+            <button class="swatch swatch--light" style="background:#F5F0EA" data-img="images/color-cloud.png" data-target="img-hush2" data-label-target="label-hush2" data-color-name="Cloud" aria-label="Cloud" aria-pressed="false"></button>
+          </div>
+          <span class="product-color-label" id="label-hush2">Stone</span>
+          <h3 class="product-name">HUSH 2</h3>
+          <p class="product-age">18–36 months · Toddler-ready</p>
+          <p class="product-desc">Rounded beech wood shield with colour accent rim. Bold, calm, and built to last.</p>
+          <div class="pack-selector">
+            <button class="pack-btn pack-btn--active" data-price="18" data-pack-name="Single">Single — £18</button>
+            <button class="pack-btn" data-price="32" data-pack-name="Duo Pack">Duo — £32</button>
+          </div>
+          <button class="btn btn--dark btn--full add-to-cart" data-name="HUSH 2" data-price="18">Add to bag</button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <section class="trust" id="trust">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <circle cx="18" cy="18" r="15" stroke="#8FA889" stroke-width="1.5"/>
+              <circle cx="18" cy="18" r="8" stroke="#8FA889" stroke-width="1"/>
+              <circle cx="18" cy="18" r="3" fill="#8FA889"/>
+            </svg>
+          </div>
+          <h4>Orthodontic Silicone</h4>
+          <p>The same standard as hospital and clinical brands. Shaped to support your baby's natural dental development.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <rect x="6" y="14" width="24" height="16" rx="4" stroke="#8FA889" stroke-width="1.5"/>
+              <path d="M12 14V11a6 6 0 0 1 12 0v3" stroke="#8FA889" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M18 21v3" stroke="#8FA889" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>Matte Beech Wood</h4>
+          <p>Sustainably sourced, sanded smooth, sealed and rigorously tested. Safe for everything it touches.</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+              <path d="M18 4L5 10v9c0 7 5.5 13 13 16 7.5-3 13-9 13-16v-9L18 4z" stroke="#8FA889" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M12 18l4 4 8-8" stroke="#8FA889" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4>No BPA</h4>
+          <p>No BPA, no phthalates, nothing harmful. Tested to meet the same safety standards as every leading brand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial -->
+  <section class="testimonial" id="testimonial">
+    <div class="container">
+      <div class="testimonial-inner">
+        <div class="testimonial-image-wrap">
+          <img src="images/lifestyle-hand.jpeg" alt="Parent holding a HUSH pacifier in morning light" loading="lazy">
+        </div>
+        <div class="testimonial-content">
+          <div class="quote-mark" aria-hidden="true">"</div>
+          <blockquote>
+            <p class="quote-text">This is the only one she takes every time. And honestly — I love that it doesn't look like a toy."</p>
+            <footer>
+              <cite class="quote-attribution">— Anna, mum of two</cite>
+            </footer>
+          </blockquote>
+          <div class="testimonial-stars" aria-label="Five stars">★★★★★</div>
+          <div class="testimonial-badges">
+            <span>✓ Orthodontic silicone</span>
+            <span>✓ Matte beech wood</span>
+            <span>✓ No BPA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Starter Bundle -->
+  <section class="bundle" id="bundle">
+    <div class="container">
+      <div class="bundle-inner">
+        <div class="bundle-image-wrap">
+          <img src="images/packaging.png" alt="HUSH Starter Bundle box — all three sizes" loading="lazy">
+        </div>
+        <div class="bundle-content">
+          <p class="bundle-kicker">MOST POPULAR</p>
+          <h2 class="bundle-headline">The Starter Bundle</h2>
+          <p class="bundle-desc">One of each size. Everything you need from newborn through to toddler. Thoughtfully packaged and ready to gift.</p>
+          <div class="bundle-includes">
+            <span>HUSH 0</span>
+            <span>HUSH 1</span>
+            <span>HUSH 2</span>
+          </div>
+          <p class="bundle-price">£45</p>
+          <button class="btn btn--light btn--large add-to-cart" data-name="Starter Bundle" data-price="45">Shop the Bundle</button>
+          <p class="bundle-note">Free delivery · 30-day returns · Ships in 24h</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Delivery Strip -->
+  <section class="delivery" id="delivery">
+    <div class="container">
+      <div class="delivery-grid">
+        <div class="delivery-item">
+          <p class="delivery-stat">24h</p>
+          <p class="delivery-label">Ships within 24 hours</p>
+        </div>
+        <div class="delivery-item">
+          <p class="delivery-stat">Free</p>
+          <p class="delivery-label">Delivery on every order</p>
+        </div>
+        <div class="delivery-item">
+          <p class="delivery-stat">30</p>
+          <p class="delivery-label">Day returns, no questions</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-logo">HUSH</div>
+      <p class="footer-tagline">Calm, by design.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#shop">Shop</a>
+        <a href="#trust">About</a>
+        <a href="#">Size Guide</a>
+        <a href="#">Returns</a>
+        <a href="#">Contact</a>
+      </nav>
+      <p class="footer-exclusive">Available exclusively online. You don't find HUSH on a shelf.</p>
+      <p class="footer-copy">© 2026 HUSH. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
