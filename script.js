@@ -83,7 +83,7 @@ function renderCart() {
 
   cartBadge.textContent = totalQty;
   cartBadge.classList.toggle('visible', totalQty > 0);
-  cartTotalEl.textContent = `£${totalPrice.toFixed(2)}`;
+  cartTotalEl.textContent = `$${totalPrice.toFixed(2)}`;
 
   if (cartState.items.length === 0) {
     cartBody.innerHTML = '<p class="cart-empty">Your bag is empty.</p>';
@@ -138,6 +138,16 @@ document.querySelectorAll('.add-to-cart').forEach(btn => {
     }
     renderCart();
     openCart();
+
+    if (typeof fbq === 'function') {
+      fbq('track', 'AddToCart', {
+        content_name: name,
+        content_ids: [name.replace(/\s+/g, '_').toLowerCase()],
+        content_type: 'product',
+        value: price,
+        currency: 'USD'
+      });
+    }
   });
 });
 
