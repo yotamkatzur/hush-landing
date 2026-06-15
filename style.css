@@ -164,21 +164,17 @@ ul, ol { list-style: none; }
 ═══════════════════════════ */
 .hero {
   background-color: var(--sage);
-  min-height: 100svh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding-top: 60px;
 }
 
+/* Mobile: video stacked on top, text below */
 .hero-shelf {
   width: 100%;
-  position: relative;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--sage);
-  min-height: 56vw;
-  max-height: 70vh;
+  flex-shrink: 0;
 }
 
 .hero-video {
@@ -186,8 +182,6 @@ ul, ol { list-style: none; }
   height: 100%;
   object-fit: cover;
   display: block;
-  position: absolute;
-  inset: 0;
 }
 
 .hero-text {
@@ -800,7 +794,7 @@ ul, ol { list-style: none; }
   .nav-links--left { display: flex; }
 
   .hero-shelf {
-    min-height: 42vw;
+    aspect-ratio: 16 / 9;
   }
 
   .statement-grid {
@@ -846,34 +840,31 @@ ul, ol { list-style: none; }
    RESPONSIVE — DESKTOP 1024px
 ═══════════════════════════ */
 @media (min-width: 1024px) {
-  /* Desktop hero: sage left panel + cloud right panel */
+  /* Desktop hero: video left 60% + text right 40% */
   .hero {
     flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
     min-height: 100svh;
-    padding-top: 0;
   }
   .hero-shelf {
-    flex: 1;
-    max-height: none;
-    min-height: 0;
+    flex: 0 0 60%;
+    width: 60%;
+    aspect-ratio: unset;
+    height: 100svh;
   }
-
   .hero-text {
-    flex: 0 0 460px;
+    flex: 0 0 40%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    padding: 6rem 4rem 6rem 3rem;
+    padding: 6rem 3rem 6rem 4rem;
   }
-  .hero-sub {
-    margin-inline: 0;
-  }
+  .hero-sub { margin-inline: 0; }
   .hero-cta { margin-inline: 0; align-self: flex-start; }
 }
 
 @media (min-width: 1200px) {
-  .hero-text { flex-basis: 500px; padding-left: 4rem; }
+  .hero-shelf { flex: 0 0 62%; width: 62%; }
+  .hero-text { flex: 0 0 38%; width: 38%; padding-inline: 4rem; }
 }
