@@ -840,31 +840,31 @@ ul, ol { list-style: none; }
    RESPONSIVE — DESKTOP 1024px
 ═══════════════════════════ */
 @media (min-width: 1024px) {
-  /* Desktop hero: video left 60% + text right 40% */
+  /* Desktop hero: 2-column grid, video left, text right */
   .hero {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 60fr 40fr;
     min-height: 100svh;
+    overflow: hidden;
   }
   .hero-shelf {
-    flex: 0 0 60%;
-    width: 60%;
     aspect-ratio: unset;
     height: 100svh;
+    width: 100%;
   }
   .hero-text {
-    flex: 0 0 40%;
-    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: left;
     padding: 6rem 3rem 6rem 4rem;
+    width: 100%;
   }
   .hero-sub { margin-inline: 0; }
   .hero-cta { margin-inline: 0; align-self: flex-start; }
 }
 
 @media (min-width: 1200px) {
-  .hero-shelf { flex: 0 0 62%; width: 62%; }
-  .hero-text { flex: 0 0 38%; width: 38%; padding-inline: 4rem; }
+  .hero { grid-template-columns: 62fr 38fr; }
+  .hero-text { padding-inline: 5rem; }
 }
